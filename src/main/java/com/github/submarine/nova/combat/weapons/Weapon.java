@@ -1,4 +1,4 @@
-package com.github.submarine.nova.combat;
+package com.github.submarine.nova.combat.weapons;
 
 public class Weapon {
 	protected final int damage;

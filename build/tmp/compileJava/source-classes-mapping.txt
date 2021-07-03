@@ -1,13 +1,13 @@
-com/github/submarine/nova/common/Piece.java
- com.github.submarine.nova.common.Piece
-com/github/submarine/nova/combat/weapons/Railgun.java
- com.github.submarine.nova.combat.weapons.Railgun
 com/github/submarine/nova/combat/Weapon.java
  com.github.submarine.nova.combat.Weapon
+com/github/submarine/nova/combat/weapons/Railgun.java
+ com.github.submarine.nova.combat.weapons.Railgun
 com/github/submarine/nova/combat/armours/Plasteel.java
  com.github.submarine.nova.combat.armours.Plasteel
-com/github/submarine/nova/combat/weapons/Armour.java
- com.github.submarine.nova.combat.weapons.Armour
+com/github/submarine/nova/combat/Armour.java
+ com.github.submarine.nova.combat.Armour
+com/github/submarine/nova/common/Piece.java
+ com.github.submarine.nova.common.Piece
 com/github/submarine/nova/fleet/Ship.java
  com.github.submarine.nova.fleet.Ship
 com/github/submarine/nova/Core.java

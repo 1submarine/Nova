@@ -1,6 +1,6 @@
-package com.github.submarine.nova.combat;
+package com.github.submarine.nova.combat.armours;
 
-public class  Armour {
+public class Armour {
 	protected int value;
 	protected int integrity;
 

@@ -1,19 +1,19 @@
 package com.github.submarine.nova.fleet;
 
-import com.github.submarine.nova.combat.Weapon;
-import com.github.submarine.nova.combat.Armour;
+import com.github.submarine.nova.combat.armours.Armour;
+import com.github.submarine.nova.combat.weapons.Weapon;
 import com.github.submarine.nova.common.Piece;
 
 public class Ship extends Piece {
 	protected int health;
-	// protected ArrayList<Armour> armourLayers;
 	protected Armour armour;
+	protected Weapon weapon;
 
-	public Ship(String name, int health, Armour armour) {
+	public Ship(String name, int health, Armour armour, Weapon weapon) {
 		super(name);
 		this.health = health;
-		// this.armourLayers = armourLayers;
 		this.armour = armour;
+		this.weapon = weapon;
 	}
 
 	public void TakeDamage(Weapon weapon) {
@@ -22,5 +22,9 @@ public class Ship extends Piece {
 
 	public int GetHealth() {
 		return health;
+	}
+
+	public Weapon getWeapon() {
+		return weapon;
 	}
 }
