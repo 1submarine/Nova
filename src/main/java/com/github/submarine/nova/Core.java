@@ -1,6 +1,6 @@
 package com.github.submarine.nova;
 
-import com.github.submarine.nova.combat.weapons.Railgun;
+import com.github.submarine.nova.weapons.Railgun;
 import com.github.submarine.nova.fleet.Cruiser;
 import com.github.submarine.nova.fleet.Ship;
 

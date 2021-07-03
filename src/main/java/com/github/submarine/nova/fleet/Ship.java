@@ -1,7 +1,7 @@
 package com.github.submarine.nova.fleet;
 
-import com.github.submarine.nova.combat.armours.Armour;
-import com.github.submarine.nova.combat.weapons.Weapon;
+import com.github.submarine.nova.armours.Armour;
+import com.github.submarine.nova.weapons.Weapon;
 import com.github.submarine.nova.Piece;
 
 public class Ship extends Piece {

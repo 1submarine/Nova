@@ -1,4 +1,4 @@
-package com.github.submarine.nova.combat.armours;
+package com.github.submarine.nova.armours;
 
 import org.junit.jupiter.api.Test;
 

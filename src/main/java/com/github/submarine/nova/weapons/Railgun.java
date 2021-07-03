@@ -1,4 +1,4 @@
-package com.github.submarine.nova.combat.weapons;
+package com.github.submarine.nova.weapons;
 
 public class Railgun extends Weapon {
 	public Railgun() {

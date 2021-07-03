@@ -1,4 +1,4 @@
-package com.github.submarine.nova.combat.armours;
+package com.github.submarine.nova.armours;
 
 public class Plasteel extends Armour {
 	public Plasteel() {
