@@ -1,0 +1,10 @@
+com/github/submarine/nova/combat/Weapon.java
+ com.github.submarine.nova.combat.Weapon
+com/github/submarine/nova/combat/weapons/Railgun.java
+ com.github.submarine.nova.combat.weapons.Railgun
+com/github/submarine/nova/common/Piece.java
+ com.github.submarine.nova.common.Piece
+com/github/submarine/nova/combat/Ship.java
+ com.github.submarine.nova.combat.Ship
+com/github/submarine/nova/Core.java
+ com.github.submarine.nova.Core
