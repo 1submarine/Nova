@@ -5,14 +5,7 @@ public class Piece {
 	protected String refer;
 
 	public Piece(String name) {
-		assert name != null;
+		this.name = name;
 		this.refer = name.toLowerCase().replaceAll("\\w", "");
-	}
-	public void die() {
-		System.out.println(
-			this.refer +
-			"is" +
-			this.name
-		);
 	}
 }

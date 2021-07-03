@@ -2,14 +2,8 @@ package com.github.submarine.nova.combat.weapons;
 
 import com.github.submarine.nova.combat.Weapon;
 
-public class Railgun implements Weapon {
-	private final int damage;
-
+public class Railgun extends Weapon {
 	public Railgun(int damage) {
-		this.damage = damage;
-	}
-
-	public int Damage() {
-		return this.damage;
+		super(damage);
 	}
 }
