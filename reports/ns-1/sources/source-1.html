@@ -61,7 +61,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/4)
+    (0/17)
   </span>
 </td>
 </tr>
@@ -75,22 +75,47 @@ Current scope:     <a href="../../index.html">all classes</a>
 <pre>
 <div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.github.submarine.nova;
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import com.github.submarine.nova.combat.armours.Armour;
-<i class="no-highlight">4</i>&nbsp;import com.github.submarine.nova.fleet.Ship;
-<i class="no-highlight">5</i>&nbsp;
-<i class="no-highlight">6</i>&nbsp;import java.util.ArrayList;
-<i class="no-highlight">7</i>&nbsp;
-<b class="nc"><i class="no-highlight">8</i>&nbsp;public class Core {</b>
-<i class="no-highlight">9</i>&nbsp;	public static void main(String[] args) {
-<b class="nc"><i class="no-highlight">10</i>&nbsp;		ArrayList&lt;Ship&gt; ships = new ArrayList&lt;&gt;();</b>
-<b class="nc"><i class="no-highlight">11</i>&nbsp;		ships.add(new Ship(</b>
-<i class="no-highlight">12</i>&nbsp;			&quot;Enterprise&quot;,
-<i class="no-highlight">13</i>&nbsp;			10,
-<i class="no-highlight">14</i>&nbsp;			new Armour(10)
-<i class="no-highlight">15</i>&nbsp;		));
-<b class="nc"><i class="no-highlight">16</i>&nbsp;		ships.removeIf(ship -&gt; ship.GetHealth() == 0);</b>
-<i class="no-highlight">17</i>&nbsp;	}
-<i class="no-highlight">18</i>&nbsp;}
+<i class="no-highlight">3</i>&nbsp;import com.github.submarine.nova.combat.weapons.Railgun;
+<i class="no-highlight">4</i>&nbsp;import com.github.submarine.nova.fleet.Cruiser;
+<i class="no-highlight">5</i>&nbsp;import com.github.submarine.nova.fleet.Ship;
+<i class="no-highlight">6</i>&nbsp;
+<i class="no-highlight">7</i>&nbsp;import java.util.ArrayList;
+<i class="no-highlight">8</i>&nbsp;import java.util.HashMap;
+<i class="no-highlight">9</i>&nbsp;import java.util.Iterator;
+<i class="no-highlight">10</i>&nbsp;
+<b class="nc"><i class="no-highlight">11</i>&nbsp;public class Core {</b>
+<i class="no-highlight">12</i>&nbsp;	public static void main(String[] args) {
+<b class="nc"><i class="no-highlight">13</i>&nbsp;		HashMap&lt;String, Ship&gt; ships = new HashMap&lt;&gt;();</b>
+<b class="nc"><i class="no-highlight">14</i>&nbsp;		ArrayList&lt;Ship&gt; deadShips = new ArrayList&lt;&gt;();</b>
+<b class="nc"><i class="no-highlight">15</i>&nbsp;		ships.put(</b>
+<i class="no-highlight">16</i>&nbsp;			&quot;enterprise&quot;,
+<i class="no-highlight">17</i>&nbsp;			new Cruiser(
+<i class="no-highlight">18</i>&nbsp;				&quot;Enterprise&quot;,
+<i class="no-highlight">19</i>&nbsp;				10
+<i class="no-highlight">20</i>&nbsp;			)
+<i class="no-highlight">21</i>&nbsp;		);
+<b class="nc"><i class="no-highlight">22</i>&nbsp;		ships.put(</b>
+<i class="no-highlight">23</i>&nbsp;			&quot;clark&quot;,
+<i class="no-highlight">24</i>&nbsp;			new Cruiser(
+<i class="no-highlight">25</i>&nbsp;				&quot;Clark&quot;,
+<i class="no-highlight">26</i>&nbsp;				10
+<i class="no-highlight">27</i>&nbsp;			)
+<i class="no-highlight">28</i>&nbsp;		);
+<b class="nc"><i class="no-highlight">29</i>&nbsp;		while (!ships.isEmpty()) {</b>
+<b class="nc"><i class="no-highlight">30</i>&nbsp;			Iterator&lt;Ship&gt; i = ships.values().iterator();</b>
+<b class="nc"><i class="no-highlight">31</i>&nbsp;			while (i.hasNext()) {</b>
+<b class="nc"><i class="no-highlight">32</i>&nbsp;				Ship current = i.next();</b>
+<b class="nc"><i class="no-highlight">33</i>&nbsp;				current.takeDamage(new Railgun());</b>
+<b class="nc"><i class="no-highlight">34</i>&nbsp;				if (current.getHealth() &lt;= 0) {</b>
+<b class="nc"><i class="no-highlight">35</i>&nbsp;					deadShips.add(current);</b>
+<b class="nc"><i class="no-highlight">36</i>&nbsp;					i.remove();</b>
+<i class="no-highlight">37</i>&nbsp;				}
+<b class="nc"><i class="no-highlight">38</i>&nbsp;			}</b>
+<b class="nc"><i class="no-highlight">39</i>&nbsp;		}</b>
+<b class="nc"><i class="no-highlight">40</i>&nbsp;		System.out.println(&quot;Dead:&quot;);</b>
+<b class="nc"><i class="no-highlight">41</i>&nbsp;		deadShips.forEach(ship -&gt; System.out.println(&quot;\t&quot; + ship.getName()));</b>
+<i class="no-highlight">42</i>&nbsp;	}
+<i class="no-highlight">43</i>&nbsp;}
 </div>
 </pre>
 </div>
@@ -117,7 +142,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2021-07-03 11:09</div>
+    <div style="float:right;">generated on 2021-07-03 15:57</div>
 </div>
 </body>
 </html>

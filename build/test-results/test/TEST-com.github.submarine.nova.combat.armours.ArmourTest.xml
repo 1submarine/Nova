@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.submarine.nova.combat.armours.ArmourTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-07-03T20:03:17" hostname="renzoBox" time="0.037">
+  <properties/>
+  <testcase name="getIntegrity()" classname="com.github.submarine.nova.combat.armours.ArmourTest" time="0.025"/>
+  <testcase name="getResist()" classname="com.github.submarine.nova.combat.armours.ArmourTest" time="0.002"/>
+  <testcase name="reduceIntegrity()" classname="com.github.submarine.nova.combat.armours.ArmourTest" time="0.0"/>
+  <testcase name="getValue()" classname="com.github.submarine.nova.combat.armours.ArmourTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

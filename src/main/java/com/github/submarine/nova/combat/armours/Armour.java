@@ -10,6 +10,16 @@ public class Armour {
 	}
 
 	public int getValue() {
-		return value;
+		return this.value;
+	}
+
+	public int getIntegrity() {
+		return this.integrity;
+	}
+	public int getResist() { return this.getValue() * this.getIntegrity() / 100; }
+
+	public void reduceIntegrity(int damage) {
+		this.integrity -= damage;
+		if (this.integrity < 1) this.integrity = 1;
 	}
 }

@@ -7,14 +7,14 @@ import org.junit.jupiter.api.Test;
 
 class ShipTest {
 	@Test
-	public void TakeDamage() {
+	public void takeDamage() {
 		Ship ship = new Ship(
 			"Test",
 			10,
 			new Plasteel(),
 			new Railgun()
 		);
-		ship.TakeDamage(new Weapon(10));
-		assert ship.GetHealth() == 9;
+		ship.takeDamage(new Weapon(10));
+		assert ship.getHealth() == 9;
 	}
 }

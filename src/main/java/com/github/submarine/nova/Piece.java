@@ -1,4 +1,4 @@
-package com.github.submarine.nova.common;
+package com.github.submarine.nova;
 
 public class Piece {
 	protected String name;

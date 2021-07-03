@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.github.submarine.nova.fleet.ShipTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-03T15:23:38" hostname="renzoBox" time="0.128">
+<testsuite name="com.github.submarine.nova.fleet.ShipTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-03T20:03:17" hostname="renzoBox" time="0.004">
   <properties/>
-  <testcase name="TakeDamage()" classname="com.github.submarine.nova.fleet.ShipTest" time="0.128"/>
+  <testcase name="takeDamage()" classname="com.github.submarine.nova.fleet.ShipTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
