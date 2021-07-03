@@ -1,4 +1,4 @@
-com/github/submarine/nova/combat/armours/ArmourTest.java
- com.github.submarine.nova.combat.armours.ArmourTest
+com/github/submarine/nova/armours/ArmourTest.java
+ com.github.submarine.nova.armours.ArmourTest
 com/github/submarine/nova/fleet/ShipTest.java
  com.github.submarine.nova.fleet.ShipTest

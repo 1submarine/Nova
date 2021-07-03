@@ -1,20 +1,44 @@
 package com.github.submarine.nova.fleet;
 
-import com.github.submarine.nova.armours.Plasteel;
-import com.github.submarine.nova.weapons.Railgun;
+import com.github.submarine.nova.armours.Armour;
 import com.github.submarine.nova.weapons.Weapon;
 import org.junit.jupiter.api.Test;
 
 class ShipTest {
+	private final String name = "test";
+	private final int value = 10;
+	private final Ship local = new Ship(
+		this.name,
+		this.value,
+		new Armour(this.value),
+		new Weapon(this.value)
+	);
+
 	@Test
-	public void takeDamage() {
-		Ship ship = new Ship(
-			"Test",
-			10,
-			new Plasteel(),
-			new Railgun()
-		);
-		ship.takeDamage(new Weapon(10));
-		assert ship.getHealth() == 9;
+	void takeDamage() {
+		this.local.takeDamage(this.value);
+		assert this.local.getHealth() == 9;
+	}
+
+	@Test
+	void getHealth() {
+		assert this.local.getHealth() == this.value;
+	}
+
+	@Test
+	void getName() {
+		assert this.local.getName().equals(this.name);
+	}
+
+	@Test
+	void getWeapon() {
+		Weapon tested = new Weapon(this.value);
+		assert this.local.getWeapon().equals(tested);
+	}
+
+	@Test
+	void getArmour() {
+		Armour tested = new Armour(this.value);
+		assert this.local.getArmour().equals(tested);
 	}
 }

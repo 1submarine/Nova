@@ -21,24 +21,17 @@ public class Ship extends Piece {
 		this.weapon = weapon;
 	}
 
-	public void takeDamage(Weapon weapon) {
-		this.health -= weapon.Damage() / this.getArmour().getResist();
-		this.armour.reduceIntegrity(weapon.Damage());
+	public void takeDamage(int damage) {
+		if (this.getArmour().getResist() != 0) {
+			this.health -= damage / this.getArmour().getResist();
+			this.armour.reduceIntegrity(damage);
+		} else {
+			this.health -= damage;
+		}
 	}
 
-	public int getHealth() {
-		return this.health;
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public Weapon getWeapon() {
-		return this.weapon;
-	}
-
-	public Armour getArmour() {
-		return this.armour;
-	}
+	public int getHealth() { return this.health; }
+	public String getName() { return this.name; }
+	public Weapon getWeapon() { return this.weapon; }
+	public Armour getArmour() { return this.armour; }
 }

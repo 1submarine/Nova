@@ -28,7 +28,7 @@ public class Core {
 			Iterator<Ship> i = ships.values().iterator();
 			while (i.hasNext()) {
 				Ship current = i.next();
-				current.takeDamage(new Railgun());
+				current.takeDamage(new Railgun().getDamage());
 				System.out.println(current.getName() + ":");
 				System.out.println("\tHealth: " + current.getHealth());
 				System.out.println("\tArmour: " + current.getArmour().getResist());
