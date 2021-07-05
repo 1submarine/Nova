@@ -61,7 +61,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/17)
+    (0/21)
   </span>
 </td>
 </tr>
@@ -90,32 +90,34 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="nc"><i class="no-highlight">15</i>&nbsp;		ships.put(</b>
 <i class="no-highlight">16</i>&nbsp;			&quot;enterprise&quot;,
 <i class="no-highlight">17</i>&nbsp;			new Cruiser(
-<i class="no-highlight">18</i>&nbsp;				&quot;Enterprise&quot;,
-<i class="no-highlight">19</i>&nbsp;				10
-<i class="no-highlight">20</i>&nbsp;			)
-<i class="no-highlight">21</i>&nbsp;		);
-<b class="nc"><i class="no-highlight">22</i>&nbsp;		ships.put(</b>
-<i class="no-highlight">23</i>&nbsp;			&quot;clark&quot;,
-<i class="no-highlight">24</i>&nbsp;			new Cruiser(
-<i class="no-highlight">25</i>&nbsp;				&quot;Clark&quot;,
-<i class="no-highlight">26</i>&nbsp;				10
-<i class="no-highlight">27</i>&nbsp;			)
-<i class="no-highlight">28</i>&nbsp;		);
-<b class="nc"><i class="no-highlight">29</i>&nbsp;		while (!ships.isEmpty()) {</b>
-<b class="nc"><i class="no-highlight">30</i>&nbsp;			Iterator&lt;Ship&gt; i = ships.values().iterator();</b>
-<b class="nc"><i class="no-highlight">31</i>&nbsp;			while (i.hasNext()) {</b>
-<b class="nc"><i class="no-highlight">32</i>&nbsp;				Ship current = i.next();</b>
-<b class="nc"><i class="no-highlight">33</i>&nbsp;				current.takeDamage(new Railgun());</b>
-<b class="nc"><i class="no-highlight">34</i>&nbsp;				if (current.getHealth() &lt;= 0) {</b>
-<b class="nc"><i class="no-highlight">35</i>&nbsp;					deadShips.add(current);</b>
-<b class="nc"><i class="no-highlight">36</i>&nbsp;					i.remove();</b>
-<i class="no-highlight">37</i>&nbsp;				}
-<b class="nc"><i class="no-highlight">38</i>&nbsp;			}</b>
-<b class="nc"><i class="no-highlight">39</i>&nbsp;		}</b>
-<b class="nc"><i class="no-highlight">40</i>&nbsp;		System.out.println(&quot;Dead:&quot;);</b>
-<b class="nc"><i class="no-highlight">41</i>&nbsp;		deadShips.forEach(ship -&gt; System.out.println(&quot;\t&quot; + ship.getName()));</b>
-<i class="no-highlight">42</i>&nbsp;	}
-<i class="no-highlight">43</i>&nbsp;}
+<i class="no-highlight">18</i>&nbsp;				&quot;Enterprise&quot;
+<i class="no-highlight">19</i>&nbsp;			)
+<i class="no-highlight">20</i>&nbsp;		);
+<b class="nc"><i class="no-highlight">21</i>&nbsp;		ships.put(</b>
+<i class="no-highlight">22</i>&nbsp;			&quot;clark&quot;,
+<i class="no-highlight">23</i>&nbsp;			new Cruiser(
+<i class="no-highlight">24</i>&nbsp;				&quot;Clark&quot;
+<i class="no-highlight">25</i>&nbsp;			)
+<i class="no-highlight">26</i>&nbsp;		);
+<b class="nc"><i class="no-highlight">27</i>&nbsp;		while (!ships.isEmpty()) {</b>
+<b class="nc"><i class="no-highlight">28</i>&nbsp;			Iterator&lt;Ship&gt; i = ships.values().iterator();</b>
+<b class="nc"><i class="no-highlight">29</i>&nbsp;			while (i.hasNext()) {</b>
+<b class="nc"><i class="no-highlight">30</i>&nbsp;				Ship current = i.next();</b>
+<b class="nc"><i class="no-highlight">31</i>&nbsp;				current.takeDamage(new Railgun().getDamage());</b>
+<b class="nc"><i class="no-highlight">32</i>&nbsp;				System.out.println(current.getName() + &quot;:&quot;);</b>
+<b class="nc"><i class="no-highlight">33</i>&nbsp;				System.out.println(&quot;\tHealth: &quot; + current.getHealth());</b>
+<b class="nc"><i class="no-highlight">34</i>&nbsp;				System.out.println(&quot;\tArmour: &quot; + current.getArmour().getResist());</b>
+<b class="nc"><i class="no-highlight">35</i>&nbsp;				if (current.getHealth() &lt;= 0) {</b>
+<b class="nc"><i class="no-highlight">36</i>&nbsp;					deadShips.add(current);</b>
+<b class="nc"><i class="no-highlight">37</i>&nbsp;					i.remove();</b>
+<i class="no-highlight">38</i>&nbsp;				}
+<b class="nc"><i class="no-highlight">39</i>&nbsp;				System.out.println();</b>
+<b class="nc"><i class="no-highlight">40</i>&nbsp;			}</b>
+<b class="nc"><i class="no-highlight">41</i>&nbsp;		}</b>
+<b class="nc"><i class="no-highlight">42</i>&nbsp;		System.out.println(&quot;Dead:&quot;);</b>
+<b class="nc"><i class="no-highlight">43</i>&nbsp;		deadShips.forEach(ship -&gt; System.out.println(&quot;\t&quot; + ship.getName()));</b>
+<i class="no-highlight">44</i>&nbsp;	}
+<i class="no-highlight">45</i>&nbsp;}
 </div>
 </pre>
 </div>
@@ -142,7 +144,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2021-07-03 15:57</div>
+    <div style="float:right;">generated on 2021-07-03 18:25</div>
 </div>
 </body>
 </html>

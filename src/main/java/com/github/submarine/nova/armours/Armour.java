@@ -3,19 +3,23 @@ package com.github.submarine.nova.armours;
 public class Armour {
 	protected int value;
 	protected int integrity;
+	protected int resist;
 
 	public Armour(int value) {
 		this.value = value;
 		this.integrity = 100;
+		this.resist = value;
 	}
 
 	public int getValue() { return this.value; }
 	public int getIntegrity() { return this.integrity; }
-	public int getResist() { return this.getValue() * this.getIntegrity() / 100; }
-
+	public int getResist() { return this.resist; }
 	public void reduceIntegrity(int damage) {
 		this.integrity -= damage;
-		if (this.integrity < 1) this.integrity = 1;
+		this.resist = this.getValue() * this.getIntegrity() / 100;
+		if (this.getResist() < 0) {
+			this.resist = 0;
+		}
 	}
 
 	@Override

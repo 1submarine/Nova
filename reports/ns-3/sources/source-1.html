@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > Railgun</title>
+  <title>Coverage Report > Cruiser</title>
   <style type="text/css">
     @import "../../.css/coverage.css";
     @import "../../.css/highlight-idea.css";
@@ -17,10 +17,10 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.github.submarine.nova.combat.weapons</a>
+    <a href="../index.html">com.github.submarine.nova.fleet</a>
 </div>
 
-<h1>Coverage Summary for Class: Railgun (com.github.submarine.nova.combat.weapons)</h1>
+<h1>Coverage Summary for Class: Cruiser (com.github.submarine.nova.fleet)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -39,7 +39,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">Railgun</td>
+  <td class="name">Cruiser</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -73,13 +73,23 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.github.submarine.nova.combat.weapons;
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.github.submarine.nova.fleet;
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;public class Railgun extends Weapon {
-<i class="no-highlight">4</i>&nbsp;	public Railgun() {
-<b class="nc"><i class="no-highlight">5</i>&nbsp;		super(10);</b>
-<i class="no-highlight">6</i>&nbsp;	}
-<i class="no-highlight">7</i>&nbsp;}
+<i class="no-highlight">3</i>&nbsp;import com.github.submarine.nova.armours.Plasteel;
+<i class="no-highlight">4</i>&nbsp;import com.github.submarine.nova.weapons.Railgun;
+<i class="no-highlight">5</i>&nbsp;
+<i class="no-highlight">6</i>&nbsp;public class Cruiser extends Ship {
+<i class="no-highlight">7</i>&nbsp;	public Cruiser(
+<i class="no-highlight">8</i>&nbsp;		String name
+<i class="no-highlight">9</i>&nbsp;	) {
+<b class="nc"><i class="no-highlight">10</i>&nbsp;		super(</b>
+<i class="no-highlight">11</i>&nbsp;			name,
+<i class="no-highlight">12</i>&nbsp;			100,
+<i class="no-highlight">13</i>&nbsp;			new Plasteel(),
+<i class="no-highlight">14</i>&nbsp;			new Railgun()
+<i class="no-highlight">15</i>&nbsp;		);
+<i class="no-highlight">16</i>&nbsp;	}
+<i class="no-highlight">17</i>&nbsp;}
 </div>
 </pre>
 </div>
@@ -106,7 +116,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2021-07-03 15:57</div>
+    <div style="float:right;">generated on 2021-07-03 18:25</div>
 </div>
 </body>
 </html>

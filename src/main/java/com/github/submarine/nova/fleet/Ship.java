@@ -22,12 +22,14 @@ public class Ship extends Piece {
 	}
 
 	public void takeDamage(int damage) {
-		if (this.getArmour().getResist() != 0) {
-			this.health -= damage / this.getArmour().getResist();
-			this.armour.reduceIntegrity(damage);
+		int taken;
+		if (this.getArmour().getResist() > 0) {
+			taken = damage - this.getArmour().getResist();
+			this.getArmour().reduceIntegrity(Math.max(taken, 1));
 		} else {
-			this.health -= damage;
+			taken = damage;
 		}
+		this.health -= taken;
 	}
 
 	public int getHealth() { return this.health; }

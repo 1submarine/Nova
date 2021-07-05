@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > Piece</title>
+  <title>Coverage Report > Railgun</title>
   <style type="text/css">
     @import "../../.css/coverage.css";
     @import "../../.css/highlight-idea.css";
@@ -17,10 +17,10 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.github.submarine.nova.common</a>
+    <a href="../index.html">com.github.submarine.nova.weapons</a>
 </div>
 
-<h1>Coverage Summary for Class: Piece (com.github.submarine.nova.common)</h1>
+<h1>Coverage Summary for Class: Railgun (com.github.submarine.nova.weapons)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -39,7 +39,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">Piece</td>
+  <td class="name">Railgun</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -61,7 +61,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/3)
+    (0/1)
   </span>
 </td>
 </tr>
@@ -73,17 +73,11 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.github.submarine.nova.common;
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.github.submarine.nova.weapons;
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;public class Piece {
-<i class="no-highlight">4</i>&nbsp;	protected String name;
-<i class="no-highlight">5</i>&nbsp;	protected String refer;
-<i class="no-highlight">6</i>&nbsp;
-<b class="nc"><i class="no-highlight">7</i>&nbsp;	public Piece(String name) {</b>
-<b class="nc"><i class="no-highlight">8</i>&nbsp;		this.name = name;</b>
-<b class="nc"><i class="no-highlight">9</i>&nbsp;		this.refer = name.toLowerCase().replaceAll(&quot;\\w&quot;, &quot;&quot;);</b>
-<i class="no-highlight">10</i>&nbsp;	}
-<i class="no-highlight">11</i>&nbsp;}
+<i class="no-highlight">3</i>&nbsp;public class Railgun extends Weapon {
+<b class="nc"><i class="no-highlight">4</i>&nbsp;	public Railgun() { super(100); }</b>
+<i class="no-highlight">5</i>&nbsp;}
 </div>
 </pre>
 </div>
@@ -110,7 +104,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2021-07-03 15:57</div>
+    <div style="float:right;">generated on 2021-07-03 18:25</div>
 </div>
 </body>
 </html>

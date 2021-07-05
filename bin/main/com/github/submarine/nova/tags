@@ -1,0 +1,55 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/Users/renzo/Documents/code/java/Nova/src/main/java/com/github/submarine/nova/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210620.0/
+Armour	armours/Armour.java	/^	public Armour(int value) {$/;"	m	class:Armour
+Armour	armours/Armour.java	/^public class Armour {$/;"	c
+Core	Core.java	/^public class Core {$/;"	c
+Cruiser	fleet/Cruiser.java	/^	public Cruiser($/;"	m	class:Cruiser
+Cruiser	fleet/Cruiser.java	/^public class Cruiser extends Ship {$/;"	c
+Piece	Piece.java	/^	public Piece(String name) {$/;"	m	class:Piece
+Piece	Piece.java	/^public class Piece {$/;"	c
+Plasteel	armours/Plasteel.java	/^	public Plasteel() { super(10); }$/;"	m	class:Plasteel
+Plasteel	armours/Plasteel.java	/^public class Plasteel extends Armour {$/;"	c
+Railgun	weapons/Railgun.java	/^	public Railgun() { super(100); }$/;"	m	class:Railgun
+Railgun	weapons/Railgun.java	/^public class Railgun extends Weapon {$/;"	c
+Ship	fleet/Ship.java	/^	public Ship($/;"	m	class:Ship
+Ship	fleet/Ship.java	/^public class Ship extends Piece {$/;"	c
+Weapon	weapons/Weapon.java	/^	public Weapon(int damage) { this.damage = damage; }$/;"	m	class:Weapon
+Weapon	weapons/Weapon.java	/^public class Weapon {$/;"	c
+armour	fleet/Ship.java	/^	protected Armour armour;$/;"	f	class:Ship
+com.github.submarine.nova	Core.java	/^package com.github.submarine.nova;$/;"	p
+com.github.submarine.nova	Piece.java	/^package com.github.submarine.nova;$/;"	p
+com.github.submarine.nova.armours	armours/Armour.java	/^package com.github.submarine.nova.armours;$/;"	p
+com.github.submarine.nova.armours	armours/Plasteel.java	/^package com.github.submarine.nova.armours;$/;"	p
+com.github.submarine.nova.fleet	fleet/Cruiser.java	/^package com.github.submarine.nova.fleet;$/;"	p
+com.github.submarine.nova.fleet	fleet/Ship.java	/^package com.github.submarine.nova.fleet;$/;"	p
+com.github.submarine.nova.weapons	weapons/Railgun.java	/^package com.github.submarine.nova.weapons;$/;"	p
+com.github.submarine.nova.weapons	weapons/Weapon.java	/^package com.github.submarine.nova.weapons;$/;"	p
+damage	weapons/Weapon.java	/^	protected int damage;$/;"	f	class:Weapon
+equals	armours/Armour.java	/^	public boolean equals(Object obj) {$/;"	m	class:Armour
+equals	weapons/Weapon.java	/^	public boolean equals(Object obj) {$/;"	m	class:Weapon
+getArmour	fleet/Ship.java	/^	public Armour getArmour() { return this.armour; }$/;"	m	class:Ship
+getDamage	weapons/Weapon.java	/^	public int getDamage() { return this.damage; }$/;"	m	class:Weapon
+getHealth	fleet/Ship.java	/^	public int getHealth() { return this.health; }$/;"	m	class:Ship
+getIntegrity	armours/Armour.java	/^	public int getIntegrity() { return this.integrity; }$/;"	m	class:Armour
+getName	fleet/Ship.java	/^	public String getName() { return this.name; }$/;"	m	class:Ship
+getResist	armours/Armour.java	/^	public int getResist() { return this.getValue() * this.getIntegrity() \/ 100; }$/;"	m	class:Armour
+getValue	armours/Armour.java	/^	public int getValue() { return this.value; }$/;"	m	class:Armour
+getWeapon	fleet/Ship.java	/^	public Weapon getWeapon() { return this.weapon; }$/;"	m	class:Ship
+health	fleet/Ship.java	/^	protected int health;$/;"	f	class:Ship
+integrity	armours/Armour.java	/^	protected int integrity;$/;"	f	class:Armour
+main	Core.java	/^	public static void main(String[] args) {$/;"	m	class:Core
+name	Piece.java	/^	protected String name;$/;"	f	class:Piece
+reduceIntegrity	armours/Armour.java	/^	public void reduceIntegrity(int damage) {$/;"	m	class:Armour
+refer	Piece.java	/^	protected String refer;$/;"	f	class:Piece
+takeDamage	fleet/Ship.java	/^	public void takeDamage(int damage) {$/;"	m	class:Ship
+value	armours/Armour.java	/^	protected int value;$/;"	f	class:Armour
+weapon	fleet/Ship.java	/^	protected Weapon weapon;$/;"	f	class:Ship

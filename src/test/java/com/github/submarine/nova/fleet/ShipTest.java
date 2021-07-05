@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class ShipTest {
 	private final String name = "test";
-	private final int value = 10;
+	private final int value = 100;
 	private final Ship local = new Ship(
 		this.name,
 		this.value,
@@ -17,18 +17,16 @@ class ShipTest {
 	@Test
 	void takeDamage() {
 		this.local.takeDamage(this.value);
-		assert this.local.getHealth() == 9;
+		assert this.local.getHealth() == 99;
+		assert this.local.getArmour().getIntegrity() == 98;
+		assert this.local.getArmour().getResist() == 98;
 	}
 
 	@Test
-	void getHealth() {
-		assert this.local.getHealth() == this.value;
-	}
+	void getHealth() { assert this.local.getHealth() == this.value; }
 
 	@Test
-	void getName() {
-		assert this.local.getName().equals(this.name);
-	}
+	void getName() { assert this.local.getName().equals(this.name); }
 
 	@Test
 	void getWeapon() {

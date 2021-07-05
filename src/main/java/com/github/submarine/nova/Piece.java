@@ -6,6 +6,6 @@ public class Piece {
 
 	public Piece(String name) {
 		this.name = name;
-		this.refer = name.toLowerCase().replaceAll("\\w", "");
+		this.refer = name.toLowerCase().replaceAll("\\s", "");
 	}
 }
