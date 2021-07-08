@@ -67,7 +67,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\Nova-1.0-SNAPSHOT.jar;%APP_HOME%\lib\annotations-20.1.0.jar
+set CLASSPATH=%APP_HOME%\lib\Nova-ALPHA-1.0.dirty.jar;%APP_HOME%\lib\annotations-20.1.0.jar
 
 
 @rem Execute Nova
