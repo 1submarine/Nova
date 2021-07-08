@@ -8,4 +8,7 @@ public class Piece {
 		this.name = name;
 		this.refer = name.toLowerCase().replaceAll("\\s", "");
 	}
+
+	public String getName() { return this.name; }
+	public String getRefer() { return this.refer; }
 }

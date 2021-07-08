@@ -33,7 +33,6 @@ public class Ship extends Piece {
 	}
 
 	public int getHealth() { return this.health; }
-	public String getName() { return this.name; }
 	public Weapon getWeapon() { return this.weapon; }
 	public Armour getArmour() { return this.armour; }
 }

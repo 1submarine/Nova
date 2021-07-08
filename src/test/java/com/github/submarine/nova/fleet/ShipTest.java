@@ -17,9 +17,9 @@ class ShipTest {
 	@Test
 	void takeDamage() {
 		this.local.takeDamage(this.value);
-		assert this.local.getHealth() == 99;
-		assert this.local.getArmour().getIntegrity() == 98;
-		assert this.local.getArmour().getResist() == 98;
+		assert this.local.getHealth() == 100;
+		assert this.local.getArmour().getIntegrity() == 99;
+		assert this.local.getArmour().getResist() == 99;
 	}
 
 	@Test
