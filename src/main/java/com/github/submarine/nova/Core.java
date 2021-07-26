@@ -1,6 +1,7 @@
 package com.github.submarine.nova;
 
 import com.github.submarine.nova.fleet.Cruiser;
+import com.github.submarine.nova.fleet.Fleet;
 import com.github.submarine.nova.fleet.Ship;
 import com.github.submarine.nova.weapons.Railgun;
 
@@ -19,10 +20,9 @@ public class Core {
 			BattleResult frame = new BattleResult();
 			frame.setVisible(true);
 
-			// TODO Create Separate Fleet Object
-			HashMap<String, HashMap<String, Ship>> fleets = new HashMap<>();
-			fleets.put("fleet1", new HashMap<>());
-			fleets.put("fleet2", new HashMap<>());
+			HashMap<String, Fleet> fleets = new HashMap<>();
+			fleets.put("fleet1", new Fleet());
+			fleets.put("fleet2", new Fleet());
 			ArrayList<Ship> deadShips = new ArrayList<>();
 			fleets.get("fleet1").put(
 				"enterprise",
@@ -36,11 +36,9 @@ public class Core {
 					"Clark"
 				)
 			);
-			// TODO check all fleets to see if empty
-			// URGENT clean this mess up
+			// TODO clean this mess up
 			while (!Core.isVictory(fleets)) {
-				// ^ Concurrent Modification Exception
-				for (Map.Entry<String, HashMap<String, Ship>> entry : fleets.entrySet()) {
+				for (Map.Entry<String, Fleet> entry : fleets.entrySet()) {
 					// String fleetKey = entry.getKey();
 					HashMap<String, Ship> fleet = entry.getValue();
 					for (Map.Entry<String, Ship> e : fleet.entrySet()) {
@@ -65,7 +63,7 @@ public class Core {
 		});
 	}
 
-	public static boolean isVictory(HashMap<String, HashMap<String, Ship>> fleets) {
+	public static boolean isVictory(HashMap<String, Fleet> fleets) {
 		AtomicBoolean empty = new AtomicBoolean(false);
 		fleets.forEach((fleetKey, fleetValue) -> {
 			if (fleetValue.isEmpty()) empty.set(true);
