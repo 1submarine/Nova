@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 class ShipTest {
 	private final String name = "test";
 	private final int value = 100;
+	private final Weapon weapon = new Weapon(this.value);
 	private final Ship local = new Ship(
 		this.name,
 		this.value,
@@ -16,7 +17,7 @@ class ShipTest {
 
 	@Test
 	void takeDamage() {
-		this.local.takeDamage(this.value);
+		this.local.takeDamage(weapon);
 		assert this.local.getHealth() == 100;
 		assert this.local.getArmour().getIntegrity() == 99;
 		assert this.local.getArmour().getResist() == 99;

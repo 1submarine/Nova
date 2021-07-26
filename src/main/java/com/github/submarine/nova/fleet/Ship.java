@@ -21,15 +21,17 @@ public class Ship extends Piece {
 		this.weapon = weapon;
 	}
 
-	public void takeDamage(int damage) {
-		int taken;
-		if (this.getArmour().getResist() > 0) {
-			taken = damage - this.getArmour().getResist();
-			this.getArmour().reduceIntegrity(Math.max(taken, 1));
-		} else {
-			taken = damage;
+	public void takeDamage(Weapon weapon) {
+		if (weapon.getTechLevel() >= this.getArmour().getTechLevel()) {
+			int taken;
+			if (this.getArmour().getResist() > 0) {
+				taken = weapon.getDamage() - this.getArmour().getResist();
+				this.getArmour().reduceIntegrity(Math.max(taken, 1));
+			} else {
+				taken = weapon.getDamage();
+			}
+			this.health -= taken;
 		}
-		this.health -= taken;
 	}
 
 	public int getHealth() { return this.health; }

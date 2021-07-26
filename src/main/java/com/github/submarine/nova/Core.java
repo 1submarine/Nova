@@ -2,6 +2,7 @@ package com.github.submarine.nova;
 
 import com.github.submarine.nova.fleet.Cruiser;
 import com.github.submarine.nova.fleet.Ship;
+import com.github.submarine.nova.weapons.Railgun;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -45,8 +46,8 @@ public class Core {
 					for (Map.Entry<String, Ship> e : fleet.entrySet()) {
 						String shipKey = e.getKey();
 						Ship ship = e.getValue();
-// TODO take damage from an active ship
-						ship.takeDamage(100);
+						// TODO take damage from an active ship
+						ship.takeDamage(new Railgun());
 						// Print Ship Status
 						System.out.println(ship.getName() + ":");
 						System.out.println("\tHealth: " + ship.getHealth());
@@ -71,5 +72,4 @@ public class Core {
 		});
 		return empty.get();
 	}
-
 }
