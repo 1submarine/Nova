@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 class ArmourTest {
 	private final int value = 10;
-	private final Armour local = new Armour(this.value);
+	private final Armour local = new Armour(this.value, this.value);
 
 	@Test
 	void getValue() { assert this.local.getValue() == this.value; }
@@ -17,7 +17,7 @@ class ArmourTest {
 
 	@Test
 	void reduceIntegrity() {
-		Armour local = new Armour(this.value);
+		Armour local = new Armour(this.value, this.value);
 		local.reduceIntegrity(this.value);
 		assert local.getIntegrity() == 90;
 	}

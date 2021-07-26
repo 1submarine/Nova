@@ -22,16 +22,17 @@ public class Ship extends Piece {
 	}
 
 	public void takeDamage(Weapon weapon) {
-		if (weapon.getTechLevel() >= this.getArmour().getTechLevel()) {
-			int taken;
-			if (this.getArmour().getResist() > 0) {
-				taken = weapon.getDamage() - this.getArmour().getResist();
-				this.getArmour().reduceIntegrity(Math.max(taken, 1));
-			} else {
-				taken = weapon.getDamage();
-			}
-			this.health -= taken;
+		// techMod is the difference between tech levels
+		// It is no affected by armour
+		final int techMod = weapon.getTechLevel() - this.getArmour().getTechLevel();
+		final int taken;
+		if (this.getArmour().getResist() > 0) {
+			taken = weapon.getDamage() - this.getArmour().getResist();
+			this.getArmour().reduceIntegrity(Math.max(taken, 1));
+		} else {
+			taken = weapon.getDamage();
 		}
+		this.health -= taken + techMod;
 	}
 
 	public int getHealth() { return this.health; }

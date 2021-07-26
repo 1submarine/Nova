@@ -4,7 +4,13 @@ public class Weapon {
 	protected int damage;
 	protected int techLevel;
 
-	public Weapon(int damage) { this.damage = damage; }
+	public Weapon(
+		int damage,
+		int techLevel
+	) {
+		this.damage = damage;
+		this.techLevel = techLevel;
+	}
 	public int getDamage() { return this.damage; }
 	public int getTechLevel() { return this.techLevel; }
 

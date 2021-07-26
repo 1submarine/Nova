@@ -7,12 +7,12 @@ import org.junit.jupiter.api.Test;
 class ShipTest {
 	private final String name = "test";
 	private final int value = 100;
-	private final Weapon weapon = new Weapon(this.value);
+	private final Weapon weapon = new Weapon(this.value, this.value);
 	private final Ship local = new Ship(
 		this.name,
 		this.value,
-		new Armour(this.value),
-		new Weapon(this.value)
+		new Armour(this.value, this.value),
+		new Weapon(this.value, this.value)
 	);
 
 	@Test
@@ -31,13 +31,13 @@ class ShipTest {
 
 	@Test
 	void getWeapon() {
-		Weapon tested = new Weapon(this.value);
+		Weapon tested = new Weapon(this.value, this.value);
 		assert this.local.getWeapon().equals(tested);
 	}
 
 	@Test
 	void getArmour() {
-		Armour tested = new Armour(this.value);
+		Armour tested = new Armour(this.value, this.value);
 		assert this.local.getArmour().equals(tested);
 	}
 }

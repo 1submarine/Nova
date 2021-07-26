@@ -6,10 +6,14 @@ public class Armour {
 	protected int resist;
 	protected int techLevel;
 
-	public Armour(int value) {
+	public Armour(
+		int value,
+		int techLevel
+	) {
 		this.value = value;
 		this.integrity = 100;
 		this.resist = value;
+		this.techLevel = techLevel;
 	}
 
 	public int getValue() { return this.value; }
