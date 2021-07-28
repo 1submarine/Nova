@@ -7,13 +7,19 @@ class ArmourTest {
 	private final Armour local = new Armour(this.value, this.value);
 
 	@Test
-	void getValue() { assert this.local.getValue() == this.value; }
+	void getValue() {
+		assert this.local.getValue() == this.value;
+	}
 
 	@Test
-	void getIntegrity() { assert this.local.getIntegrity() == 100; }
+	void getIntegrity() {
+		assert this.local.getIntegrity() == 100;
+	}
 
 	@Test
-	void getResist() { assert this.local.getResist() == this.value; }
+	void getResist() {
+		assert this.local.getResist() == this.value;
+	}
 
 	@Test
 	void reduceIntegrity() {

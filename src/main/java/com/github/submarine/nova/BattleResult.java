@@ -9,23 +9,6 @@ import java.io.PrintStream;
 public class BattleResult extends JFrame {
 	private final JPanel contentPane;
 	private final JTextPane textPane;
-	public class Interceptor extends PrintStream {
-		public Interceptor(OutputStream out) {
-			super(out,true);
-		}
-
-		@Override
-		public void print(String s) {
-			super.print(s);
-			textPane.setText(textPane.getText()+s);
-		}
-
-		@Override
-		public void println(String s) {
-			super.println(s);
-			textPane.setText(textPane.getText()+"\n");
-		}
-	}
 
 	public BattleResult() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -46,5 +29,23 @@ public class BattleResult extends JFrame {
 		//redirect stream
 		PrintStream interceptor = new Interceptor(System.out);
 		System.setOut(interceptor);
+	}
+
+	public class Interceptor extends PrintStream {
+		public Interceptor(OutputStream out) {
+			super(out, true);
+		}
+
+		@Override
+		public void print(String s) {
+			super.print(s);
+			textPane.setText(textPane.getText() + s);
+		}
+
+		@Override
+		public void println(String s) {
+			super.println(s);
+			textPane.setText(textPane.getText() + "\n");
+		}
 	}
 }

@@ -6,5 +6,7 @@ class PlasteelTest {
 	private final Plasteel local = new Plasteel();
 
 	@Test
-	public void plasteel() { assert this.local.getValue() == 100; }
+	public void plasteel() {
+		assert this.local.getValue() == 100;
+	}
 }

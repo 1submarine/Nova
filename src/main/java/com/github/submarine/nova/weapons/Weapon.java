@@ -11,8 +11,14 @@ public class Weapon {
 		this.damage = damage;
 		this.techLevel = techLevel;
 	}
-	public int getDamage() { return this.damage; }
-	public int getTechLevel() { return this.techLevel; }
+
+	public int getDamage() {
+		return this.damage;
+	}
+
+	public int getTechLevel() {
+		return this.techLevel;
+	}
 
 	@Override
 	public boolean equals(Object obj) {

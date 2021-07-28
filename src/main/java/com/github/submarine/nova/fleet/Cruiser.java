@@ -5,13 +5,15 @@ import com.github.submarine.nova.weapons.Railgun;
 
 public class Cruiser extends Ship {
 	public Cruiser(
-		String name
+		String name,
+		String fleet
 	) {
 		super(
 			name,
 			100,
 			new Plasteel(),
-			new Railgun()
+			new Railgun(),
+			fleet
 		);
 	}
 }

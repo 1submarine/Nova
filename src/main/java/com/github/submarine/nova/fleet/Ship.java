@@ -1,10 +1,11 @@
 package com.github.submarine.nova.fleet;
 
+import com.github.submarine.nova.Piece;
 import com.github.submarine.nova.armours.Armour;
 import com.github.submarine.nova.weapons.Weapon;
-import com.github.submarine.nova.Piece;
 
 public class Ship extends Piece {
+	protected final String fleet;
 	protected int health;
 	protected Armour armour;
 	protected Weapon weapon;
@@ -13,12 +14,14 @@ public class Ship extends Piece {
 		String name,
 		int health,
 		Armour armour,
-		Weapon weapon
+		Weapon weapon,
+		String fleet
 	) {
 		super(name);
 		this.health = health;
 		this.armour = armour;
 		this.weapon = weapon;
+		this.fleet = fleet;
 	}
 
 	public void takeDamage(Weapon weapon) {
@@ -32,10 +35,23 @@ public class Ship extends Piece {
 		} else {
 			taken = weapon.getDamage();
 		}
+		// TODO Negative Values!
 		this.health -= taken + techMod;
 	}
 
-	public int getHealth() { return this.health; }
-	public Weapon getWeapon() { return this.weapon; }
-	public Armour getArmour() { return this.armour; }
+	public int getHealth() {
+		return this.health;
+	}
+
+	public Weapon getWeapon() {
+		return this.weapon;
+	}
+
+	public Armour getArmour() {
+		return this.armour;
+	}
+
+	public String getFleet() {
+		return this.fleet;
+	}
 }

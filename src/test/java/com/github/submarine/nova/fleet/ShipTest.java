@@ -12,7 +12,8 @@ class ShipTest {
 		this.name,
 		this.value,
 		new Armour(this.value, this.value),
-		new Weapon(this.value, this.value)
+		new Weapon(this.value, this.value),
+		this.name
 	);
 
 	@Test
@@ -24,10 +25,14 @@ class ShipTest {
 	}
 
 	@Test
-	void getHealth() { assert this.local.getHealth() == this.value; }
+	void getHealth() {
+		assert this.local.getHealth() == this.value;
+	}
 
 	@Test
-	void getName() { assert this.local.getName().equals(this.name); }
+	void getName() {
+		assert this.local.getName().equals(this.name);
+	}
 
 	@Test
 	void getWeapon() {

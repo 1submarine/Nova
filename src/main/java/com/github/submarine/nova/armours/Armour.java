@@ -16,10 +16,22 @@ public class Armour {
 		this.techLevel = techLevel;
 	}
 
-	public int getValue() { return this.value; }
-	public int getIntegrity() { return this.integrity; }
-	public int getResist() { return this.resist; }
-	public int getTechLevel() { return this.techLevel; }
+	public int getValue() {
+		return this.value;
+	}
+
+	public int getIntegrity() {
+		return this.integrity;
+	}
+
+	public int getResist() {
+		return this.resist;
+	}
+
+	public int getTechLevel() {
+		return this.techLevel;
+	}
+
 	public void reduceIntegrity(int damage) {
 		this.integrity -= damage;
 		this.resist = this.getValue() * this.getIntegrity() / 100;
@@ -36,7 +48,7 @@ public class Armour {
 
 		return
 			this.getValue() == ((Armour) obj).getValue() &&
-			this.getIntegrity() == ((Armour) obj).getIntegrity()
+				this.getIntegrity() == ((Armour) obj).getIntegrity()
 			;
 	}
 }

@@ -1,5 +1,7 @@
 package com.github.submarine.nova.armours;
 
 public class Plasteel extends Armour {
-	public Plasteel() { super(100, 10); }
+	public Plasteel() {
+		super(100, 10);
+	}
 }
