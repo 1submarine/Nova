@@ -1,7 +1,2 @@
 .DS_Store
-build/
-.gradle/
-.idea/
-.settings/
-bin/
 reports/

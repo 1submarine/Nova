@@ -1,0 +1,21 @@
+com/github/submarine/nova/weapons/Weapon.java
+ com.github.submarine.nova.weapons.Weapon
+com/github/submarine/nova/weapons/Railgun.java
+ com.github.submarine.nova.weapons.Railgun
+com/github/submarine/nova/armours/Armour.java
+ com.github.submarine.nova.armours.Armour
+com/github/submarine/nova/fleet/Cruiser.java
+ com.github.submarine.nova.fleet.Cruiser
+com/github/submarine/nova/armours/Plasteel.java
+ com.github.submarine.nova.armours.Plasteel
+com/github/submarine/nova/Piece.java
+ com.github.submarine.nova.Piece
+com/github/submarine/nova/fleet/Fleet.java
+ com.github.submarine.nova.fleet.Fleet
+com/github/submarine/nova/BattleResult.java
+ com.github.submarine.nova.BattleResult
+ com.github.submarine.nova.BattleResult$Interceptor
+com/github/submarine/nova/fleet/Ship.java
+ com.github.submarine.nova.fleet.Ship
+com/github/submarine/nova/Core.java
+ com.github.submarine.nova.Core
