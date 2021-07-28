@@ -1,0 +1,6 @@
+com/github/submarine/nova/armours/ArmourTest.java
+ com.github.submarine.nova.armours.ArmourTest
+com/github/submarine/nova/armours/PlasteelTest.java
+ com.github.submarine.nova.armours.PlasteelTest
+com/github/submarine/nova/fleet/ShipTest.java
+ com.github.submarine.nova.fleet.ShipTest
